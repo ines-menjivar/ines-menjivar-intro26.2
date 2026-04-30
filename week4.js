@@ -18,13 +18,15 @@
 function convertTemp(celsiusTemp) {
 
     //created a new variable to store my results for the conversion
-    let conversion = (celsiusTemp * 9 / 5) + 32
+    let conversion = (celsiusTemp * 9 / 5) + 32;
 
     return conversion;
 }
 
 //logging it
 console.log("Q1 convertTemp: ", 0, convertTemp(0));
+console.log("Q1 convertTemp: ", 100, convertTemp(100));
+console.log("Q1 convertTemp: ", 30, convertTemp(30));
 
 
 
@@ -76,13 +78,14 @@ console.log("Q2 reverseString: ", "", reverseString(""));
 function tipCalculator(billTotal, tipPercentage) {
 
     //created a new variable to do my calculations and store results
-    let totalBillAmount = (billTotal * tipPercentage) + billTotal
+    let totalBillAmount = (billTotal * tipPercentage) + billTotal;
 
-    return totalBillAmount
+    return totalBillAmount;
 }
 
 // Don't forget your console.logs!
-console.log("Q3 tipCalculator: ", tipCalculator(20, .20));
+console.log("Q3 tipCalculator: ", 20, .20, tipCalculator(20, .20));
+console.log("Q3 tipCalculator: ", 30, .30, tipCalculator(30, .30));
 
 
 
@@ -98,7 +101,7 @@ console.log("Q3 tipCalculator: ", tipCalculator(20, .20));
 
 //created 2 variables and assigned them integer values
 let num1 = 10;
-let num2 = 20;
+let num2 = 10;
 
 //created a function that takes 2 parameters for each number we want to multiply together
 function multiplyThese(param1, param2) {
@@ -131,6 +134,7 @@ function getAverage(int1, int2) {
     return average;
 }
 
+//logging it
 console.log("Q5 getAverage: ", 3, 6, getAverage(3.0, 6.0));
 
 
@@ -152,7 +156,7 @@ function isPrime(num) {
 
     //created a conditional statement that checks if the passed number is less than or equal to 1 and if so- it's not prime, and it returns false
     if (num <= 1) {
-        return false
+        return false;
     }
 
     //created a for loop to loop for as long as the passed number's sqrt and inside it a conditional statement that checks if we have a remainder of 0. If so, our number is not prime, therefore, it's false
@@ -171,7 +175,7 @@ function isPrime(num) {
 let isItPrime = [0, 1, 2, 3, 4, 5, 6];
 
 for (let number of isItPrime) {
-    console.log("Q6 isPrime: ", number, isPrime(number))
+    console.log("Q6 isPrime: ", number, isPrime(number));
 }
 
 
@@ -201,12 +205,14 @@ function getPrimesUpTo(number) {
     }
 
     return getPrimes;
+
 }
 
 
 //logging it
-console.log("Q7 getPrimesUpTo: ", 12, isPrime(12));
-console.log("Q7 getPrimesUpTo: ", isPrime(13));
+console.log("Q7 getPrimesUpTo: ", 12, getPrimesUpTo(12));
+console.log("Q7 getPrimesUpTo: ", 13, getPrimesUpTo(13));
+
 
 
 
@@ -221,8 +227,52 @@ console.log("Q7 getPrimesUpTo: ", isPrime(13));
 // EXAMPLE OUTPUT:
 //  Q8 calculateAverage: 85 // input array let scores = [90, 80, 85];
 
-// PUT YOUR CODE HERE
+/// PUT YOUR CODE HERE ///
+//used the array of scores provided above and created 2 additional variables for other tests
+let allValidScores = [90, 80, 85];
+let emptyScoreInput = [];
+let invalidScores = [200, 103, 500];
 
+//created a function that takes an array parameter and inside it I created two variables; one to store the sum of the scores and the other to keep count of valid score values
+function calculateAverage(arr) {
+
+    let sum = 0;
+    let validNumbers = 0;
+
+    //created an initial condition that checks if the array is empty
+    if (arr.length === 0) {
+        return 0;
+    }
+
+    //created a for loop to loop thru the array of scores and setting a condition for those inputs
+    for (let i = 0; i < arr.length; i++) {
+
+        //this looks at the array one number at a time and checks if the number is less than or equal to 100 and greater than or equal to zero.
+        if (arr[i] <= 100 && arr[i] >= 0) {
+
+            //storing the sum of all numbers to then use it for the calculations
+            sum += arr[i];
+
+            //updating this variable each time the loop runs by adding one to it and then I will use in my calculations
+            validNumbers++;
+
+        }
+
+
+    }
+    //created a condition to check if there are no inpus in the array
+    if (validNumbers === 0) {
+        return 0;
+
+    }
+    //storing the average calculation results in a variable to then return it
+    let average = sum / validNumbers;
+    return average;
+}
+//logging it
+console.log("Q8 calculateAverage: ", calculateAverage(allValidScores));
+console.log("Q8 calculateAverage(empty array): ", calculateAverage(emptyScoreInput));
+console.log("Q8 calculateAverage(invalid inputs): ", calculateAverage(invalidScores));
 
 // ---------- QUESTION 9 ----------
 // Now, create a function - getLetterGrade(average) - that takes a grade average and returns a letter grade based on the following scale. Make sure you test with several averages.
@@ -238,12 +288,32 @@ console.log("Q7 getPrimesUpTo: ", isPrime(13));
 //  Q9 getLetterGrade(95): A
 
 // PUT YOUR CODE HERE
-function getLetterGrade(average){
-    
+
+//created a function that takes an integer parameter of the average and depending on the amount, it'll return the equivalent letter grade. 
+function getLetterGrade(average) {
+    if (average >= 90 && average <= 100) {
+        return "A";
+    } else if(average >= 80) {
+        return "B";
+    } else if(average >= 70) {
+        return "C";
+    } else if(average >= 60) {
+        return "D";
+    } else {
+        return "F";
+    }
 }
 
+//logging it
+console.log("Q9 getLetterGrade: ", 95, getLetterGrade(95));
+console.log("Q9 getLetterGrade: ", 80, getLetterGrade(80));
+console.log("Q9 getLetterGrade: ", 59, getLetterGrade(59));
+console.log("Q9 getLetterGrade: ", 70, getLetterGrade(70));
+console.log("Q9 getLetterGrade: ", 60, getLetterGrade(60));
 
-// ---------- QUESTION 10 ----------
+
+
+/// ---------- QUESTION 10 ----------
 // Create a 3rd function named - passed(letterGrade) - that returns true if a student's grade is A, B or C, false otherwise. Make sure you handle a value other than A,B,C,D or F passed in.
 
 // EXAMPLE LOG:
@@ -252,6 +322,24 @@ function getLetterGrade(average){
 //  Q10 passed('A''): true
 
 // PUT YOUR CODE HERE
+//created a function 
+function passed(letterGrade) {
+
+    if (letterGrade === "A" || letterGrade === "B" || letterGrade === "C") {
+        return true;
+    } else if (letterGrade === "D" || letterGrade === "F") {
+        return false;
+    } else {
+        return false;
+    }
+}
+
+//logging it 
+console.log("Q10 passed('A'): ", passed("A"));
+console.log("Q10 passed('B'): ", passed("B"));
+console.log("Q10 passed('C'): ", passed("C"));
+console.log("Q10 passed('D'): ", passed("D"));
+console.log("Q10 passed('F'): ", passed("F"));
 
 
 // ---------- QUESTION 11 ----------
@@ -264,6 +352,25 @@ function getLetterGrade(average){
 //  Q11: History 101 - Student: Jane Doe, Average: 75.5, Grade: C, Passed: yes
 
 // PUT YOUR CODE HERE
+function printClassResult(className, student, scores){
+    let average = calculateAverage(scores);
+    let letterGrade = getLetterGrade(average);
+    let checkGrade = passed(letterGrade);
+    let pass;
+
+    if(checkGrade) {
+        pass = "yes";
+    } else {
+        pass = "no";
+    }
+
+    //returning the information using backticks and template literals
+    return `${className} - Student: ${student}, Average: ${average}, Grade: ${letterGrade}, Passed: ${pass}`;
+ 
+}
+
+//logging it
+console.log("Q11: ", printClassResult("History 101", "Jane Doe", [60, 70, 85, 87]));
 
 
 // ---------- QUESTION 12 ----------
@@ -277,6 +384,12 @@ function getLetterGrade(average){
 
 // PUT YOUR CODE HERE
 
+//created a function and stored a console log inside it. I then called its values by typing the function name along with (); 
+function buttonPushed() {
+    console.log("Q12, Q13: The button was pushed!");
+}
+
+buttonPushed();
 
 // ---------- QUESTION 13 ----------
 // Now, create a function called simulateButtonPush and pass the function created in question 12 to that function.
@@ -288,3 +401,11 @@ function getLetterGrade(average){
 //  The button was pushed!
 
 // PUT YOUR CODE HERE
+
+//created a function that takes a function as a parameter
+function simulateButtonPush(funcParam) {
+    funcParam();
+}
+
+//calling it
+simulateButtonPush(buttonPushed);
