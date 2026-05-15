@@ -1,42 +1,115 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ines Menjivar's Portfolio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ines Menjivar's Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+        <!-- icons from Font awesome-->
+        <script src="https://kit.fontawesome.com/96fe661bca.js" crossorigin="anonymous"></script>
+
+
     </head>
+
     <body>
-        <h1>Ines Menjivar</h1>
+        <nav>
+            <a href="#about-me">About me</a>
+            <a href="#experience">Experience</a>
+            <a href="#connect">Connect</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
 
-        <section id="About">
+        </nav>
 
-        <h2>About</h2>
-        <p>Let me start by introducing myself, my name is Ines. I'm a wife and a mother of 3 amazing kids- I know a lot of parents say this and, although I can't speak for them in my case it's really true, my kids are truly amazing kids! The reason I'm sure of it is because my husband has made it possible for me to be a stay-at-home mom and I've been so blessed to get to spend these past few years personally caring for my kids and getting to know them for who they really are. Being able to focus on my kids and my household full-time has definitely been time comsuming, hence the full-time part. Needless to say two of my main goals in life are to be the best mother I can be to my kids and also a supportive and loving partner to my spouse. With that said, I also have other personal goals that don't involve my husband or kids. I used to feel so guilty for even thinking such things, I felt so ashamed and I realized it was because growing up I never got to see my grandma take some time to do something that was only for her. She was always taking care of the household and ensuring everyone stayed alive and fed. This is the example I grew up watching, never did I see that wonderful woman taking time for self-care or hobbies. She always did go to church but I do not count that as self-care or a hobby. Now that you know this, you can see that I've come a long way by realizing that I don't have to go down the same path and that my happiness and sanity is just as important as my kids' and husband's. Which is why I started exploring things that peaked my interest and here I am now- learning different programming languages.</p>
+        <header>
+            <h1><em>Ines Menjivar's Portfolio</em></h1>
+            <img src="images/selfie.jpg" alt="picture of Ines">
+        </header>
 
-        </section>
+        <main>
 
-        <section id="Experience">
-        <h2>Experience</h2>
-
-        <ul>
-            <li>Cooking</li>
-            <li>Organizational</li>
-            <li>Planning</li>
-            <li>Balloon Decor</li>
-            <li>Child care</li>
-            <li>Housekeeping</li>
-        </ul>
-
-        </section>
-
-        <section id="Connect">
+        <section  id="about-me" class="about-me">
+            <h2>About</h2>
             
-        <h2>Connect</h2>
-        <ul>
-            <li><a href="https://github.com/ines-menjivar">GitHub</a></li>
-            <li><a href="www.linkedin.com/in/ines-menjivar96">LinkedIn</a></li>
-        </ul>
+            <p>Hi, I’m Ines!
+            I’m a wife, a mom of three amazing kids, and someone who’s learning to balance caring for my family with pursuing my own passions. For years, I’ve poured my energy into creating a loving, organized home— cooking, managing the household, planning, decorating for special events, and keeping everything running smoothly. Those experiences have shaped who I am: patient, creative, detail‑oriented, always ready to learn something new and help those around me in any way I can.</p>
+
+            <p>As much as I love being a full‑time mom, I’ve discovered how important it is to grow as an individual. That’s what led me to explore programming. I’m excited to build new skills, challenge myself, and create things that make life easier or more beautiful— whether that’s through code, organization, or even balloon decor for special events.
+
+            I’m proud of the journey I’m on, and I’m excited to see where it takes me next.</p>
 
         </section>
+
+        <section id="experience" class="experience">
+            
+            <h2>Experience</h2>
+            <ul>
+                <li class="job">
+                    <div class="job-header">
+                        <h3>Lead Server</h3>
+                        <span class="dates">2018-2019</span>
+                    </div>
+                    <p>Oversaw daily dining operations and ensured high-quality service in a timely manner.</p>
+                </li>
+
+                <li class="job">
+                    <div class="job-header">
+                        <h3>Leasing Agent</h3>
+                        <span class="dates">2019-2021</span>
+
+                    </div>
+                    <p>Handled tours, applications, and resident communication via various channels.</p>
+                </li>
+
+                <li class="job">
+                    <div class="job-header">
+                        <h3>Property Assistant Manager</h3>
+                        <span class="dates">2022-2023</span>
+
+                    </div>
+                    <p>Assisted with office operations, reporting, resident issues and always brought a team building attitude.</p>
+                </li>
+
+                <li class="job">
+                    <div class="job-header">
+                        <h3>Housekeeper</h3>
+                        <span class="dates">2024-Present</span>
+
+                    </div>
+                    <p>Besides providing clean, organized, and safe living environments to my clients, I'm also responsible for all the logistics and client relation aspects.  </p>
+
+                </li>
+            </ul>
+        
+
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <p>Here will go a list of my skills</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Here I will add a link from GitHub later on</li>
+                
+            </ul>
+        </section>
+
+        <section id="connect" class="connect">
+            <h2>Connect</h2>
+
+            <ul>
+                <li><a href="https://github.com/ines-menjivar"><i class="fa-brands fa-github fa-2x"></i></a></li>
+                <li><a href="www.linkedin.com"><i class="fa-brands fa-square-linkedin fa-2x"></i></a></li>
+            </ul>
+
+        </section>
+
+        </main>
     </body>
 </html>
