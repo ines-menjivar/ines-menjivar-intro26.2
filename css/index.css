@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  color: #4a4e69;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  background-color: antiquewhite;
+ }
+
+ header {
+  background-color: rgba(232, 212, 228, 0.954);
+  padding: 25px;
+}
+
+nav {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  background-color: #9a8c98;
+}
+
+h1 {
+  padding: 30px;
+  margin: 40px 100px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  color: #010109;
+ }
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  color: #010109;
+
+ }
+
+img {
+  display: block;
+  width: 300px;
+  margin: 0px auto;
+
+ }
+
+.about-me {
+  border-top: 16px solid rgba(210, 179, 92, 0.242);
+  background-color: #9a8c98;
+  color: rgba(232, 212, 228, 0.954);
+  padding: 20px;
+  margin: auto;
+
+}
+
+.about-me p {
+  padding: 25px;
+  line-height: 37px;
+}
+.experience {
+  border-top: 16px solid rgba(210, 179, 92, 0.242);
+  padding: 50px;
+  margin: auto;
+  background-color: rgba(232, 212, 228, 0.954);
+}
+
+.experience ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+}
+
+.job h3 {
+margin: 0;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  color:black;
+}
+
+.dates {
+  font-weight: bolder;
+}
+
+.experience p {
+  padding: 7px;
+  margin-left: 10px;
+  line-height: 37px;
+  
+}
+
+
+
+.connect {
+  border-top: 16px solid rgba(210, 179, 92, 0.242);
+  background-color: #9a8c98;
+  padding: 20px;
+  text-align: center;
+}
+
+.connect ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 90px;
+  margin: 0 auto;
+
+}
+
+.connect li {
+  margin: 0;
+  padding: 0;
+}
+
+.connect i {
+  display: block;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: rgba(232, 212, 228, 0.954);
+}
+
+.skills {
+  border-top: 16px solid rgba(210, 179, 92, 0.242);
+  margin: 0 auto;
+  padding: 50px;
+  color: rgba(232, 212, 228, 0.954);
+  background-color: #9a8c98;
+}
+
+.projects {
+  border-top: 16px solid rgba(210, 179, 92, 0.242);
+  margin: 0 auto;
+  padding: 50px;
+  color: rgba(232, 212, 228, 0.954);
+  background-color: rgba(232, 212, 228, 0.954);
+}
