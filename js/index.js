@@ -2,7 +2,7 @@
 
 const today = new Date ();
 const thisYear = today.getFullYear();
-const footer = document.createElement("footer");
+const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 const body = document.body;
 
@@ -17,7 +17,7 @@ var skillsSection = document.querySelector(".skills");
 
 var skillsList = skillsSection.querySelector("ul");
 
-for(i = 0; i < skills.length; i++) {
+for(let i = 0; i < skills.length; i++) {
     var skill = document.createElement("li");
 
     skill.innerHTML = skills[i];
