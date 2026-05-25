@@ -106,20 +106,14 @@ margin: 0;
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 90px;
+  padding: 40px;
   margin: 0 auto;
 
 }
 
 .connect li {
-  margin: 0;
-  padding: 0;
-}
-
-.connect i {
-  display: block;
-  line-height: 1;
-  margin: 0;
+  justify-content: space-between;
+  margin: 30px;
   padding: 0;
 }
 
@@ -135,10 +129,26 @@ a {
   background-color: #9a8c98;
 }
 
+.skills ul {
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
 .projects {
   border-top: 16px solid rgba(210, 179, 92, 0.242);
   margin: 0 auto;
   padding: 50px;
   color: rgba(232, 212, 228, 0.954);
-  background-color: rgba(232, 212, 228, 0.954);
+  background-color: #e8d4e4f3;
+}
+
+footer {
+  border-top: 16px solid rgba(210, 179, 92, 0.242);
+  background-color: #e8d4e4f3;
+  margin: 0 auto;
+  padding: 20px 0px;
+
 }
