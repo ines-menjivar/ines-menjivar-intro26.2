@@ -35,6 +35,8 @@ messageForm.addEventListener("submit", function (event) {
     const name = event.target.usersName.value;
     const email = event.target.usersEmail.value;
     const message = event.target.usersMessage.value;
+    
+    console.log(name, email, message);
 
     //selecting the messages section and then the ul inside it to create a new list item
     const messageSection = document.getElementById("messages");
