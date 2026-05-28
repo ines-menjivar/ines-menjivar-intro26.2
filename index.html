@@ -21,6 +21,7 @@
             <a href="#connect">Connect</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#leave_message">Leave a Message</a>
 
         </nav>
 
@@ -109,6 +110,38 @@
 
         </section>
 
+        <!--*******FORM AREA*******-->
+        <section id="leave_message">
+            <h2>Leave a Message</h2>
+            
+            <form name="leave_message">
+                <label for="name">Name</label>
+                <div>
+                    <input type="text" name="usersName" required>
+                </div>            
+
+                <label for="email">Email</label>
+                <div>
+                    <input type="email" name="usersEmail" required>
+                </div>
+                
+                <label for="message">Message</label>
+                <div>
+                    <textarea name="usersMessage" required></textarea>
+                </div>
+                
+                <div>
+                    <label for="submit"></label>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul></ul>
+
+        </section>
         
         <footer></footer>
 

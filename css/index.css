@@ -49,7 +49,8 @@ img {
   background-color: #9a8c98;
   color: rgba(232, 212, 228, 0.954);
   padding: 20px;
-  margin: auto;
+  margin: 0;
+  width: 100%;
 
 }
 
@@ -60,7 +61,8 @@ img {
 .experience {
   border-top: 16px solid rgba(210, 179, 92, 0.242);
   padding: 50px;
-  margin: auto;
+  margin: 0;
+  width: 100%;
   background-color: rgba(232, 212, 228, 0.954);
 }
 
@@ -123,7 +125,8 @@ a {
 
 .skills {
   border-top: 16px solid rgba(210, 179, 92, 0.242);
-  margin: 0 auto;
+  margin: 0;
+  width: 100%;
   padding: 50px;
   color: rgba(232, 212, 228, 0.954);
   background-color: #9a8c98;
@@ -139,7 +142,8 @@ a {
 
 .projects {
   border-top: 16px solid rgba(210, 179, 92, 0.242);
-  margin: 0 auto;
+  margin: 0;
+  width: 100%;
   padding: 50px;
   color: rgba(232, 212, 228, 0.954);
   background-color: #e8d4e4f3;
@@ -152,3 +156,149 @@ footer {
   padding: 20px 0px;
 
 }
+
+#leave_message {
+  border-top: 16px solid rgba(210, 179, 92, 0.242);
+  display: block;
+  align-content: center;
+  padding: 50px;
+  margin: 0;
+  width: 100%;
+  background-color: #e8d4e4f3;
+}
+
+#messages {
+  border-top: 16px solid rgba(210, 179, 92, 0.242);
+  background-color: #9a8c98;
+  color: rgba(232, 212, 228, 0.954);
+  margin: 0;
+  width: 100%;
+  display: block;
+  padding: 20px;
+}
+
+#messages h2 {
+  margin: auto;
+  padding: 40px;
+}
+
+#messages ul {
+  margin: auto;
+  padding: 10px;
+}
+
+#messages li {
+  margin: auto;
+  padding: 10px;
+}
+
+#messages li button {
+  margin-left: 10px;
+}
+
+#messages a {
+  color:#4f3f50;
+}
+
+/*making sure content doesn't appear outside of desired margins*/
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/*adjusting how it looks on phone screens*/
+@media (max-width: 600px) {
+
+  /* Fix section sizing */
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+  }
+  .about-me,
+  .experience,
+  .skills,
+  .projects,
+  #leave_message{
+    padding: 20px 15px;
+  }
+  #messages {
+    padding: 20px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Fix flexbox overflow */
+  .skills ul,
+  .connect ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  /* Fix job header squeezing */
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  h1 {
+    margin: 20px 10px;
+    padding: 20px 10px;
+    font-size: 32px;
+
+  }
+
+  /* Fix long message overflow */
+  * {
+    overflow-wrap: break-word;
+  }
+}
+
+
+/* adjusting content on different tablet/ipad screen sizes*/
+@media (max-width: 1024px) {
+
+  /* Fix the big name header */
+  h1 {
+    margin: 20px;
+    padding: 20px;
+    font-size: 36px;
+  }
+
+  /* Fix flexbox overflow on tablet */
+  .skills ul,
+  .connect ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  /* Fix job header squeezing */
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  /* Reduce padding so text fits */
+  .about-me,
+  .experience,
+  .skills,
+  .projects,
+  #leave_message,
+  #messages {
+    padding: 25px 20px;
+    box-sizing: border-box;
+  }
+
+  /* Prevent long text from pushing layout */
+  * {
+    overflow-wrap: break-word;
+  }
+}
+
+
