@@ -1,5 +1,3 @@
-// const { createElement } = require("react");
-
 const today = new Date ();
 const thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
@@ -23,3 +21,50 @@ for(let i = 0; i < skills.length; i++) {
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill);
 };
+
+/**MY FORM**/
+const messageForm = document.querySelector("form[name='leave_message']");
+
+/**MY FORM EVENT LISTENER**/
+messageForm.addEventListener("submit", function (event) {
+
+    //preventing the default refreshing behavior of the "submit" event
+    event.preventDefault();
+
+    //getting the value entered for each section in the form
+    const name = event.target.usersName.value;
+    const email = event.target.usersEmail.value;
+    const message = event.target.usersMessage.value;
+    
+    console.log(name, email, message);
+
+    //selecting the messages section and then the ul inside it to create a new list item
+    const messageSection = document.getElementById("messages");
+    const messageList = messageSection.querySelector("ul");
+    const newMessage = document.createElement("li");
+
+    //setting the way messages show up on screen, using the information we are collecting from our form
+    newMessage.innerHTML = `<a href="mailto:${email}">${name}:</a>
+    <span> ${message}</span>`;
+
+    /***REMOVE BUTTON***/
+    const removeButton = document.createElement("button");
+    removeButton.innerHTML = "remove";
+    removeButton.setAttribute("type", "button");
+
+    /* MY EVENT LISTENER FOR REMOVE BUTTON */
+    removeButton.addEventListener("click", function (event){
+        const entry = event.target.parentNode;
+        entry.remove();
+    })
+    //adding the remove button to the messages section
+    newMessage.append(removeButton);
+    //adding the new messages to the list inside the messages ul
+    messageList.append(newMessage);
+
+    //reseting the form after the info has been submitted
+    event.target.reset();
+
+})
+
+
