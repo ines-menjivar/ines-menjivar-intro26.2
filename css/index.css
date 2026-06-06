@@ -144,9 +144,17 @@ a {
   border-top: 16px solid rgba(210, 179, 92, 0.242);
   margin: 0;
   width: 100%;
-  padding: 50px;
+  padding: 30px;
   color: #696769;
   background-color: #e8d4e4f3;
+}
+
+.projects ul li {
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;  
 }
 
 footer {
