@@ -67,4 +67,21 @@ messageForm.addEventListener("submit", function (event) {
 
 })
 
+/***LESSON 9 FETCH API***/
+//using DOM selection to select my project section and the <ul> element in it. I'm storing that in variables.
+const projectSection = document.getElementById("projects");
+const projectList = projectSection.querySelector("ul");
 
+fetch("https://api.github.com/users/ines-menjivar/repos")
+.then(response => response.json())
+.then(data => {
+    const repositories = data;
+    console.log(repositories);
+
+    for (let i = 0; i < repositories.length; i++) {
+        const project = document.createElement("li");
+        project.innerHTML = repositories[i].name;
+        projectList.appendChild(project);
+    } 
+})
+.catch(error => console.error(error));
