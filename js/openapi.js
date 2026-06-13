@@ -25,6 +25,7 @@ function getArtwork(id) {
         artistEl.textContent = artist;
         dateEl.textContent = date;
         imgEl.src = imgURL;
+        imgEl.alt = `Artwork title ${title}`;
 
         //appending image details to my space created
         displayArt.appendChild(titleEl);
