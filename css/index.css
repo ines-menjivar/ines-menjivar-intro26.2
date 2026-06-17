@@ -50,7 +50,7 @@ img {
   color: rgba(232, 212, 228, 0.954);
   padding: 20px;
   margin: 0;
-  width: 100%;
+  /* width: 100%; */
 
 }
 
@@ -62,7 +62,7 @@ img {
   border-top: 16px solid rgba(210, 179, 92, 0.242);
   padding: 50px;
   margin: 0;
-  width: 100%;
+  /* width: 100%; */
   background-color: rgba(232, 212, 228, 0.954);
 }
 
@@ -126,7 +126,7 @@ a {
 .skills {
   border-top: 16px solid rgba(210, 179, 92, 0.242);
   margin: 0;
-  width: 100%;
+  /* width: 100%; */
   padding: 50px;
   color: rgba(232, 212, 228, 0.954);
   background-color: #9a8c98;
@@ -142,19 +142,18 @@ a {
 
 .projects {
   border-top: 16px solid rgba(210, 179, 92, 0.242);
+  border-bottom: 26px solid rgba(235, 228, 208, 0.242);
   margin: 0;
-  width: 100%;
-  padding: 30px;
-  color: #696769;
+  /* width: 100%; */
+  padding: 50px;
+  color: #4a4e69;
   background-color: #e8d4e4f3;
 }
 
-.projects ul li {
-  margin: 0 auto;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;  
+.projects ul li{
+  text-align: center;
+  list-style: none;
+
 }
 
 footer {
@@ -171,7 +170,7 @@ footer {
   align-content: center;
   padding: 50px;
   margin: 0;
-  width: 100%;
+  /* width: 100%; */
   background-color: #e8d4e4f3;
 }
 
@@ -180,7 +179,7 @@ footer {
   background-color: #9a8c98;
   color: rgba(232, 212, 228, 0.954);
   margin: 0;
-  width: 100%;
+  /* width: 100%; */
   display: block;
   padding: 20px;
 }
@@ -210,9 +209,9 @@ footer {
 
 /*making sure content doesn't appear outside of desired margins*/
 html, body {
-  max-width: 100%;
-  overflow-x: hidden;
+  overflow: visible;
 }
+
 
 /*adjusting how it looks on phone screens*/
 @media (max-width: 600px) {
@@ -232,7 +231,7 @@ html, body {
   }
   #messages {
     padding: 20px 15px;
-    width: 100%;
+    /* width: 100%; */
     box-sizing: border-box;
   }
 

@@ -6,12 +6,25 @@ body {
     
 }
 
+h1 {
+    text-align: center;
+    padding: 25px;
+}
+
 #artworks {
     /* making it responsive with different screen sizes */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 40vh;
 }
 
 

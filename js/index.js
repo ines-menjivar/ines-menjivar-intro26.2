@@ -1,20 +1,23 @@
+//created variables to: select my footer section, create a new "p" element using DOM selection and manipulation. Using built in functions to get the date displayed.
 const today = new Date ();
 const thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 const body = document.body;
 
-body.append(footer);
+//setting the copyright icon here as the inner text of my html element created previously
 copyright.innerHTML = `\u00A9 Ines Menjivar ${thisYear}`;
 footer.appendChild(copyright);
 copyright.style.textAlign = "center";
 
-var skills = ["JavaScript", "HTML", "CSS", "GitHub", "Canva"];
+//creating more variables to use in my skills section. The idea is to use the variable "skills" which stores an array listing some of my skills
+var skills = ["JavaScript", "HTML", "CSS", "GitHub", "Canva", "DOM Skills", "Git"];
 
 var skillsSection = document.querySelector(".skills");
 
 var skillsList = skillsSection.querySelector("ul");
 
+//for loop to go thru the array of skills 
 for(let i = 0; i < skills.length; i++) {
     var skill = document.createElement("li");
 

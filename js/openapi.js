@@ -1,3 +1,4 @@
+//created a function that fetches the data I want to display for the artworks
 function getArtwork(id) {
     fetch(`https://api.artic.edu/api/v1/artworks/${id}`)
     .then(response => response.json())
@@ -43,5 +44,17 @@ function getArtwork(id) {
     });
 }
 
-getArtwork(111628);
-getArtwork(27992);
+//selecting the artworks container/section
+const container = document.getElementById("artworks");
+
+//creating a button for artwork 1
+document.getElementById("art1").addEventListener("click", function () {
+    container.innerHTML = ""; 
+    getArtwork(111628);
+});
+
+//creating a button for artwork 2
+document.getElementById("art2").addEventListener("click", function () {
+    container.innerHTML = "";
+    getArtwork(27992);
+})
